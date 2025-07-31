@@ -4,10 +4,11 @@ A real-time, responsive React + TypeScript dashboard designed for office display
 
 ---
 
-
 ## 📸 Dashboard Preview
-![Dashboard Screenshot](./assets/dashboard.png)
-![Dashboard Screenshot](./assets/dataFetchError.png)
+
+![Dashboard Screenshot](./src/assets/dashboard.png)
+![Dashboard Screenshot](./src/assets/dataFetchError.png)
+
 ---
 
 ## ✨ AI Prompts Used
@@ -21,7 +22,7 @@ These are the **exact** prompts used to build the POC:
 : Recent orders with customer details, locations, amounts, and status indicators for each region. Since it's a dashboard, please make sure it has a professional design, a Clean, modern interface with proper spacing, colours, and a responsive layout that works on all devices.
 `
 - `Would you like me to generate the entire project as a ZIP file with this professional dashboard (including Chart.js integration and responsive UI) so you can run it instantly? - Yes`
-- `The main component is ready, now adjust the styles. I went to Canva AI, typed in I have to create an e-commerce dashboard to show info about orders from three commerce instances representing our APAC, UK, and US operations. Then get a design. 1. Then paste the dashboard header to ChatGPT, say I want the same style.  2. I want my global metrics to have the same styles as. 3. Very good, now I want my regional tabs followers to have the same styles as…. 4. Very good, now I want my recent orders to have the same styles as….   5. Responsive in different screen sizes.   6. I want to reorganise my code structure, inside main, should have metriccards, regionOverviewWrapper, regionOrders.  7. The header does  not fully take up all the page width.
+- `The main component is ready, now adjust the styles. I went to Canva AI, typed in I have to create an e-commerce dashboard to show info about orders from three commerce instances representing our APAC, UK, and US operations. Then get a design. 1. Then paste the dashboard header to ChatGPT, say I want the same style. 2. I want my global metrics to have the same styles as. 3. Very good, now I want my regional tabs followers to have the same styles as…. 4. Very good, now I want my recent orders to have the same styles as…. 5. Responsive in different screen sizes. 6. I want to reorganise my code structure, inside main, should have metriccards, regionOverviewWrapper, regionOrders. 7. The header does not fully take up all the page width.
 - `Good, now styles all done, now I want the data to make more sense, instead of top country, I want to show top sales category`
 - `Now, because it will show in the office display, instead of manually clicking each region, it shows the corresponding region. Can it show different regions automatically without clicking the button - Auto-Switch Regions?`
 - `For the refresh data button, I am thinking it's for office display, maybe automatically refresh every hour, when refreshing data, I want the button to be disabled`
@@ -35,49 +36,56 @@ These are the **exact** prompts used to build the POC:
 ## 🧠 Technical Design & Reasoning
 
 - **Optimised for Office Displays:**
+
   - Auto-refreshes every hour.
   - Automatically cycles through regions every 5 seconds.
   - Prioritises visual clarity over interaction.
 
 - **High-Level Metrics First:**
+
   - Displays **Total Orders**, **Total Revenue**, **Average Order Value**, and **Pending Orders**.
   - Metrics are updated every hour automatically.
   - Manual refresh available with visual loading state.
 
 - **Per-Region Overview:**
+
   - Automatically rotates through **APAC**, **UK**, **US** every 5 seconds.
   - Displays:
-	- Orders Over Last 6 Months (trend line chart)
-	- Total Orders
-	- Total Revenue
-	- Top Sale Category
+  - Orders Over Last 6 Months (trend line chart)
+  - Total Orders
+  - Total Revenue
+  - Top Sale Category
 
 - **Responsive UI:**
+
   - Uses Flexbox and media queries.
   - Sections stack vertically on smaller screens.
 
 - **Componentization:**
+
   - Each UI element (cards, charts, tabs, tables) is modular for clarity and reuse.
   - File structure:
-	```plaintext
-	src/
-	├── components/
-	│   ├── HeaderBar/
-	│   ├── MetricCards/
-	│   ├── OrderTable/
-	│   ├── OrderTrendChart/
-	│   ├── RegionTabs/
-	│   └── StatCard/
-	├── data/
-	│   └── mockOrders.ts
-	├── pages/
-	│   └── Dashboard/
-	├── App.tsx
-	├── main.tsx
-	├── index.css
-	```
+
+  ```plaintext
+  src/
+  ├── components/
+  │   ├── HeaderBar/
+  │   ├── MetricCards/
+  │   ├── OrderTable/
+  │   ├── OrderTrendChart/
+  │   ├── RegionTabs/
+  │   └── StatCard/
+  ├── data/
+  │   └── mockOrders.ts
+  ├── pages/
+  │   └── Dashboard/
+  ├── App.tsx
+  ├── main.tsx
+  ├── index.css
+  ```
 
 - **Error Handling:**
+
   - Friendly error banner when data fails to load.
 
 - **Auto-Refresh with `Promise.all`:**
@@ -130,4 +138,3 @@ npm run dev
 - Manual test and layout adjustments
 
 > **AI contributed ~70–80% of the initial build effort.**
-
