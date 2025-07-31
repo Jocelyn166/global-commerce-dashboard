@@ -1,0 +1,93 @@
+.wrapper {
+  margin: 0;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 100%;
+}
+
+.thead {
+  background-color: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.thead th {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.th,
+.td {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.th {
+  text-transform: uppercase;
+  color: #6b7280;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.tbody tr {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cellBold {
+  font-weight: 600;
+}
+
+.status {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 9999px;
+}
+
+.delivered {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.shipped {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.processing {
+  background-color: #ffedd5;
+  color: #9a3412;
+}
+
+.pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.canceled {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

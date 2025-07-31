@@ -1,0 +1,48 @@
+.statCard {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  background-color: white;
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.statSubValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.blueCard {
+  background-color: #eff6ff;
+}
+
+.greenCard {
+  background-color: #ecfdf5;
+}
+
+.purpleCard {
+  background-color: #f5f3ff;
+}
+
+.blueCard .statLabel {
+  color: #2563eb;
+}
+
+.greenCard .statLabel {
+  color: #16a34a;
+}
+
+.purpleCard .statLabel {
+  color: #7c3aed;
+}
