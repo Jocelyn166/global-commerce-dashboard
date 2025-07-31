@@ -4,6 +4,12 @@ A real-time, responsive React + TypeScript dashboard designed for office display
 
 ---
 
+
+## 📸 Dashboard Preview
+![Dashboard Screenshot](./assets/dashboard.png)
+![Dashboard Screenshot](./assets/dataFetchError.png)
+---
+
 ## ✨ AI Prompts Used
 
 These are the **exact** prompts used to build the POC:
